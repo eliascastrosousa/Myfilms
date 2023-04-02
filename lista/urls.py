@@ -10,7 +10,7 @@ urlpatterns = [
     path('editar/<int:id>', editar, name="editar"),
     path('update/<int:id>', update, name="update"),
     path('delete/<int:id>', delete, name="delete"),
-    path('excluir/<int:id>', excluir, name="excluir"),
+    path('excluir/<int:id>', excluir, name="excluir")
 
     
 

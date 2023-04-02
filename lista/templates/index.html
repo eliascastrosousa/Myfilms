@@ -36,8 +36,9 @@
               </div>
               <div class="col-sm-3 mt-2">
                 <a href="{% url 'detalhes' lista.id %}"><button type="button" class="btn btn-primary  me-md-1">Detalhes</button></a>
-                <a ref="{% url 'editar' lista.id %}"><button type="button" class="btn btn-primary me-md-1">Editar</button></a>
-                <a ref="{% url 'delete' lista.id %}"><button type="button" class="btn btn-danger me-md-1">Deletar</button></a>
+                <a href="{% url 'editar' lista.id %}"><button type="button" class="btn btn-primary  me-md-1">Editar</button></a>
+                <a href="{% url 'delete' lista.id %}"><button type="button" class="btn btn-danger  me-md-1">Deletar</button></a>
+                
               </div>
             </div>
             <hr>
