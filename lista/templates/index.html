@@ -17,12 +17,12 @@
         
             {% for lista in lista %}
             <div class="row">
-              <div class="col-sm-8">
-                <div class="list-group">
+              <div class="col-sm-6">
+                
                     <div class="d-flex w-100 justify-content-between">
-                    <h5 class="mb-1">{{lista.nome}}</h5>
-                    <small>Categoria: {{lista.tipo_filme}}</small>
+                      <h5 class="mb-1">{{lista.nome}}</h5>
                     </div>
+
                     {% if lista.resenha %}
                       <p class="mb-1">Resenha: {{lista.resenha}}</p>
                     {% endif%}
@@ -30,12 +30,14 @@
                     {% if lista.concluido %}
                       <small>Concluido</small>
                     {% endif%}
-                </div>
+                
               </div>
-              <div class="col-sm-4">
-                <a href="#"><button type="button" class="btn btn-primary mt-1 me-md-2">Detalhes</button></a>
-                <a href="{% url 'editar' lista.id %}"><button type="button" class="btn btn-primary mt-1 me-md-2">Editar</button></a>
-                <a href="{% url 'delete' lista.id %}"><button type="button" class="btn btn-danger mt-1 me-md-2">Deletar</button></a>
+              <div class="col-sm-3">
+                <small>Categoria: {{lista.tipo_filme}}</small>
+              </div>
+              <div class="col-sm-3">
+                <a href="{% url 'editar' lista.id %}"><button type="button" class="btn btn-primary  me-md-2">Editar</button></a>
+                <a ref="{% url 'delete' lista.id %}"><button type="button" class="btn btn-danger me-md-2">Deletar</button></a>
               </div>
             </div>
             <hr>
