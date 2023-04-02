@@ -6,7 +6,6 @@
 
     <H1>Liste seus filmes e series aqui!</H1>
     <br>
-    <br>
 
 
     <ol class="list-group">
@@ -35,9 +34,10 @@
               <div class="col-sm-3">
                 <small>Categoria: {{lista.tipo_filme}}</small>
               </div>
-              <div class="col-sm-3">
-                <a href="{% url 'editar' lista.id %}"><button type="button" class="btn btn-primary  me-md-2">Editar</button></a>
-                <a ref="{% url 'delete' lista.id %}"><button type="button" class="btn btn-danger me-md-2">Deletar</button></a>
+              <div class="col-sm-3 mt-2">
+                <a href="{% url 'detalhes' lista.id %}"><button type="button" class="btn btn-primary  me-md-1">Detalhes</button></a>
+                <a ref="{% url 'editar' lista.id %}"><button type="button" class="btn btn-primary me-md-1">Editar</button></a>
+                <a ref="{% url 'delete' lista.id %}"><button type="button" class="btn btn-danger me-md-1">Deletar</button></a>
               </div>
             </div>
             <hr>

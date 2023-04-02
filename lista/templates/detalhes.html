@@ -1,0 +1,22 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="container mt-5" >
+
+        <h2>Detalhes</h2>
+        <hr>
+        <h5 class="mb-1">{{lista.nome}}</h5>
+
+        {% if lista.resenha %}
+            <p class="mb-1">Resenha: {{lista.resenha}}</p>
+        {% endif%}
+                    
+        {% if lista.concluido %}
+            <p>Concluido</p>
+        {% endif%}          
+                                    
+        <p>Categoria: {{lista.tipo_filme}}</p>
+    <div>
+        
+    {% endblock content %}

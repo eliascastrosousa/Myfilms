@@ -50,3 +50,7 @@ def excluir(request, id):
     lista = Lista.objects.get(id=id)
     lista.delete()
     return redirect(home)
+
+def detalhes(request, id):
+    lista = Lista.objects.get(id=id)
+    return render(request, 'detalhes.html', {"lista":lista})
