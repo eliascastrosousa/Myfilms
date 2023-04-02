@@ -1,0 +1,43 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container mt-5" >
+    <form action="{% url 'update' lista.id %}" method="POST">
+        {% csrf_token %}
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Titulo</label>
+            <input type="text" class="form-control" id="nome" name="nome" value="{{lista.nome}}">
+        </div>
+        <br>
+        <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Categoria</label>
+            <select class="form-select" aria-label="Default select example" name="tipo_filme">
+                <option value="Ação">Ação</option>
+                <option value="Comédia">Comédia</option>
+                <option value="Drama">Drama</option>
+                <option value="Romance">Romance</option>
+                <option value="Documentário">Documentário</option>
+                <option value="Suspense">Suspense</option>                
+                <option value="Terror">Terror</option>
+                <option value="Ficção científica">Ficção científica</option>
+            </select>
+        </div>
+        <br>
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="True" id="True" name="concluido" >
+            <label class="form-check-label" for="flexCheckChecked">
+              Concluido
+            </label>
+        </div>
+        <br>
+        <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Resenha</label>
+            <textarea class="form-control" id="resenha" name="resenha" rows="3" >{{lista.resenha}}</textarea>
+        </div>
+        
+        <br>
+        <button type="submit" class="btn btn-primary">Atualizar</button>       
+    </form>
+</div>
+{% endblock content %}
