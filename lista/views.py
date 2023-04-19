@@ -54,3 +54,12 @@ def excluir(request, id):
 def detalhes(request, id):
     lista = Lista.objects.get(id=id)
     return render(request, 'detalhes.html', {"lista":lista})
+
+def perfil(request):
+    return render(request, 'perfil.html')
+
+def login(request):
+    return render(request, 'login.html') 
+
+def register(request):
+    return render(request, 'register.html') 
